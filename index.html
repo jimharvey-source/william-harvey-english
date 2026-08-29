@@ -132,8 +132,14 @@
     padding:clamp(3.5rem,8vw,6rem) 0 clamp(3rem,6vw,5rem);
     border-bottom:1px solid var(--line);
   }
-  .hero-grid{display:grid; grid-template-columns:1.35fr .65fr; gap:clamp(2rem,5vw,4rem); align-items:center}
-  @media (max-width:820px){ .hero-grid{grid-template-columns:1fr} }
+  .hero-grid{
+    display:grid; grid-template-columns:1.35fr .65fr; grid-template-rows:auto auto;
+    column-gap:clamp(2rem,5vw,4rem); row-gap:0; align-items:start;
+  }
+  .hero-head{grid-column:1; grid-row:1}
+  .hero-body{grid-column:1; grid-row:2}
+  .portrait-block{grid-column:2; grid-row:1 / span 2; align-self:center}
+  .hero-head h1{margin-bottom:.35em}
   .hero p.lede{font-size:clamp(1.08rem,2.1vw,1.3rem); color:var(--muted); max-width:33rem}
   .hero-cta{display:flex; flex-wrap:wrap; gap:.75rem; margin-top:2rem}
   .hero .cases{margin:1.5rem 0 1.6rem; max-width:31rem}
@@ -164,9 +170,11 @@
     max-width:none; text-align:center;
   }
   @media (max-width:820px){
-    .portrait-block{align-items:center; margin-top:1.75rem}
+    .hero-grid{grid-template-columns:1fr; grid-template-rows:none}
+    .hero-head, .hero-body, .portrait-block{grid-column:1; grid-row:auto}
+    .portrait-block{align-self:start; align-items:center; margin:.4rem 0 1.9rem}
     .portrait{max-width:14rem}
-    .welcome{max-width:22rem}
+    .welcome{max-width:24rem}
   }
 
   /* ---------- intro ---------- */
@@ -368,9 +376,15 @@
 
 <header class="hero" id="top">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-head">
       <p class="eyebrow">CELTA-qualified English teacher</p>
       <h1>English lessons to suit you.</h1>
+    </div>
+    <div class="portrait-block">
+      <img src="will.jpg" alt="William Harvey holding his First Class Zoology degree certificate" class="portrait" width="900" height="1125">
+      <p class="welcome">Hi. I&rsquo;m Will Harvey. English, Zoology graduate, CELTA-qualified English teacher.</p>
+    </div>
+    <div class="hero-body">
       <p class="lede">I work with a wide range of students.</p>
       <ul class="cases">
         <li>Professionals who want to build their fluency in English.</li>
@@ -387,10 +401,6 @@
         <li>Online, in person and small groups</li>
         <li>Free 20-minute first call</li>
       </ul>
-    </div>
-    <div class="portrait-block">
-      <img src="will.jpg" alt="William Harvey holding his First Class Zoology degree certificate" class="portrait" width="900" height="1125">
-      <p class="welcome">Hi. I&rsquo;m Will Harvey. English, Zoology graduate, CELTA-qualified English teacher.</p>
     </div>
   </div>
 </header>
