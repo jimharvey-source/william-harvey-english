@@ -21,7 +21,7 @@
   1. FORM_ACCESS_KEY in the script at the foot of this file.
      Free key from web3forms.com. Until it is in, the form
      validates but sends nothing.
-  2. [EDIT: TOWN] — where Will teaches in person. Two places.
+  2. [EDIT: TOWN] — where Will teaches in person. Four places.
   3. Photo is in: will.jpg beside this file. Done.
 
   NEVER open this file in Microsoft Word. Word rewrites it as
@@ -153,9 +153,16 @@
     color:var(--clay-soft); line-height:1;
   }
   img.portrait{display:block; height:auto; background:none}
+  .portrait-block{display:flex; flex-direction:column; gap:.9rem}
+  .welcome{
+    margin:0; font-size:.95rem; line-height:1.5; color:var(--green-mid);
+    max-width:none; text-align:center;
+  }
   @media (max-width:820px){
-    .hero-grid > div{order:2}
-    .portrait{order:1; max-width:13rem; aspect-ratio:1; margin-bottom:.5rem}
+    .hero-grid > div:not(.portrait-block){order:2}
+    .portrait-block{order:1; align-items:center; margin-bottom:.5rem}
+    .portrait{max-width:13rem; aspect-ratio:1}
+    .welcome{max-width:22rem}
   }
 
   /* ---------- intro ---------- */
@@ -171,7 +178,7 @@
   }
   .stress{
     font-family:Fraunces,Georgia,serif; font-size:clamp(1.25rem,2.6vw,1.7rem);
-    line-height:1.35; color:var(--green); max-width:30rem; margin:0;
+    line-height:1.4; color:var(--green); max-width:none; margin:0;
   }
 
   /* ---------- cards ---------- */
@@ -360,63 +367,65 @@
     <div>
       <p class="eyebrow">CELTA-qualified English teacher</p>
       <h1>English lessons to build real confidence.</h1>
-      <p class="lede">Learn to speak English clearly and confidently for work, travel or socialising. Build your vocabulary, sharpen your grammar, and sound the way you want to sound. One to one, online by Zoom or in person. Every course is built for the individual.</p>
+      <p class="lede">Speak English clearly and with confidence. For work, for travel, for friends. We build your vocabulary. We sharpen your grammar. You decide how you want to sound. Lessons are one to one, online by Zoom or in person.</p>
       <div class="hero-cta">
         <a class="btn" href="#enquiry">Tell me what you need</a>
         <a class="btn btn-ghost" href="#how">How it works</a>
       </div>
       <ul class="credentials">
-        <li>CELTA qualified, the gold standard for teaching</li>
-        <li>Adults and young learners welcome</li>
-        <li>Online, in person and group lessons</li>
+        <li>CELTA qualified</li>
+        <li>Adults, teenagers and children</li>
+        <li>Online, in person and small groups</li>
         <li>Free 20-minute first call</li>
       </ul>
     </div>
-    <img src="will.jpg" alt="William Harvey holding his First Class Zoology degree certificate" class="portrait" width="900" height="1125">
+    <div class="portrait-block">
+      <img src="will.jpg" alt="William Harvey holding his First Class Zoology degree certificate" class="portrait" width="900" height="1125">
+      <p class="welcome">Hi. I&rsquo;m Will Harvey. English, Zoology graduate, CELTA-qualified English teacher.</p>
+    </div>
   </div>
 </header>
 
 <section class="intro">
   <div class="narrow">
-    <p class="eyebrow">Why it works this way</p>
-    <h2>Nobody learns English in general.</h2>
-    <p>Think about the people who ask me for lessons in a typical month.</p>
+    <p class="eyebrow">How I teach</p>
+    <h2>English lessons to suit you.</h2>
+    <p>I work with a wide range of students.</p>
     <ul class="cases">
-      <li>An engineer who reads technical specifications without trouble, then goes silent the moment the meeting starts.</li>
-      <li>A student who needs IELTS 7.0 by March and keeps losing marks in the same part of the writing paper.</li>
-      <li>A thirteen-year-old who has stopped putting her hand up in class.</li>
-      <li>Someone who has lived in the UK for six years and still rehearses before phoning the dentist.</li>
+      <li>Professionals who want to build their fluency in English.</li>
+      <li>Students who need IELTS 7.0.</li>
+      <li>Schoolchildren who want to practise.</li>
+      <li>Adults who want to build real confidence.</li>
     </ul>
-    <p>Four different problems. A course book treats them as one problem and starts everybody on page one.</p>
-    <p class="stress">I start with you and what you want, then build the lessons around it. That is why the enquiry form asks proper questions.</p>
+    <p class="stress">Formal courses treat everyone the same way.<br>I build the lessons around you.</p>
   </div>
 </section>
 
 <section id="who">
   <div class="wrap">
     <p class="eyebrow">Who I teach</p>
-    <h2>Four kinds of learner, four different plans.</h2>
-    <p>If you are not sure which one you are, say so on the form. Most people sit across two.</p>
+    <h2>Four kinds of learner. Four different plans.</h2>
+    <p>Not sure which one you are? Say so on the form. Most people fit into two.</p>
     <div class="grid-4">
       <div class="card">
         <span class="tag">Exams</span>
         <h3>Exam preparation</h3>
-        <p>IELTS, Cambridge B2 First and C1 Advanced, TOEFL. We work backwards from your test date, using past papers and timed practice, and we go straight at the parts where you keep dropping marks.</p>
+        <p>IELTS, Cambridge B2 First and C1 Advanced, TOEFL. We start at your test date and plan backwards. We use past papers. We practise against the clock. We work hardest on the parts where you lose marks.</p>
       </div>
       <div class="card">
         <span class="tag">Work</span>
         <h3>Business English</h3>
-        <p>Meetings, presentations, interviews and email that gets a reply. We use your real documents and your real situations rather than invented ones, so the practice transfers on Monday morning.</p>
+        <p>Meetings, presentations, interviews, and emails that get a reply. We practise with your real documents and your real meetings. You can use it at work the next day.</p>
       </div>
       <div class="card">
         <span class="tag">Fluency</span>
         <h3>Everyday conversation</h3>
-        <p>Speaking, listening and confidence. Phone calls, appointments, small talk, disagreeing politely. The aim is that you stop writing the sentence in your head before you say it.</p>
+        <p>Speaking, listening and confidence. Phone calls, appointments, small talk, and how to disagree politely. You will stop planning each sentence before you say it.</p>
       </div>
       <div class="card">
         <span class="tag">Young learners</span>
         <h3>Children and teenagers</h3>
-        <p>School support, GCSE years, and children settling into English-medium education. Structured, patient, and honest with parents about what is improving and what is not.</p>
+        <p>School support, GCSE years, and children starting school in English. Lessons are clear, structured and patient. I tell parents honestly how their child is doing.</p>
       </div>
     </div>
   </div>
@@ -425,19 +434,19 @@
 <section id="how" style="background:var(--paper); border-block:1px solid var(--line)">
   <div class="wrap">
     <p class="eyebrow">How it works</p>
-    <h2>Three steps, and no obligation until step three.</h2>
+    <h2>Three steps. You decide at step three.</h2>
     <ol class="steps">
       <li>
         <h3>Tell me what you need</h3>
-        <p>Fill in the form below. It asks what you want to be able to do, and why now. It takes about five minutes, and it is the most useful five minutes of the whole process.</p>
+        <p>Fill in the form below. It asks two things. What do you want to do in English? Why now? It takes five minutes, and those five minutes save us both a lot of time.</p>
       </li>
       <li>
         <h3>A free 20-minute call</h3>
-        <p>We talk it through on Zoom. I tell you what I think will work, roughly how long it will take, and whether I am the right teacher for it. If I am not, I will say so and point you somewhere better.</p>
+        <p>We talk on Zoom. I tell you what will work, how long it will take, and whether I am the right teacher for you. If another teacher suits you better, I will say so.</p>
       </li>
       <li>
         <h3>Start lessons</h3>
-        <p>Weekly or twice weekly, whichever suits. Materials, homework and a short written summary after every lesson so you can see the ground you have covered.</p>
+        <p>Once or twice a week, whichever suits you. You get materials, homework, and a short written summary after every lesson, so you can see your progress.</p>
       </li>
     </ol>
   </div>
@@ -446,16 +455,16 @@
 <section id="lessons">
   <div class="wrap">
     <p class="eyebrow">Lessons</p>
-    <h2>Online or in person. Same preparation either way.</h2>
+    <h2>Online or in person. I prepare the same way for both.</h2>
     <div class="panels">
       <div class="panel dark">
         <span class="tag">Online</span>
         <h3>By Zoom, anywhere</h3>
-        <p>Most of my teaching is online, and it works. Shared documents, live corrections you can keep, and recordings if you want to go back over a lesson.</p>
+        <p>Most of my teaching is online, and it works well. We share documents. I correct your English as we go and you keep the notes. I can record the lesson so you can watch it again.</p>
         <ul>
           <li>40 or 60-minute lessons</li>
           <li>Individual or group tuition</li>
-          <li>Flexible times to suit you, across time zones</li>
+          <li>Flexible times, in any time zone</li>
           <li>Written notes after every session</li>
           <li>All materials shared digitally</li>
         </ul>
@@ -463,9 +472,9 @@
       <div class="panel">
         <span class="tag">In person</span>
         <h3>Face to face in [EDIT: TOWN]</h3>
-        <p>In person suits young learners, nervous speakers and group lessons. I travel within a reasonable distance, or we can use a quiet public space like a coffee shop or a library.</p>
+        <p>In person suits children, quiet speakers and small groups. I travel a reasonable distance. We can also meet somewhere quiet and public, like a caf&eacute; or a library.</p>
         <ul>
-          <li>At your home, office or a library</li>
+          <li>At your home, your office or a library</li>
           <li>Within [EDIT: TOWN] and the surrounding area</li>
           <li>Good for children and teenagers</li>
           <li>Small groups by arrangement</li>
@@ -475,7 +484,7 @@
 
     <div class="price-block">
       <h3>Single lessons</h3>
-      <p>One to one or in a small group, online or in person. Paid in advance.</p>
+      <p>One to one, or in a small group. Online or in person. Please pay in advance.</p>
       <div class="table-scroll">
         <table class="prices">
           <thead>
@@ -500,12 +509,12 @@
         <div class="offer">
           <h3>Block of ten lessons</h3>
           <span class="price">£400 <small>/ ten lessons</small></span>
-          <p>Booked in advance. Cheaper per lesson, and ten lessons in a row is what delivers the results.</p>
+          <p>Book and pay in advance. Each lesson costs less, and ten lessons together is what makes the difference.</p>
         </div>
         <div class="offer">
           <h3>First call</h3>
           <span class="price">Free <small>/ 20 minutes</small></span>
-          <p>No lesson, no sales pitch. We work out whether this is a good fit.</p>
+          <p>No lesson. No sales pitch. We find out whether I am the right teacher for you.</p>
         </div>
       </div>
     </div>
@@ -516,7 +525,7 @@
   <div class="narrow">
     <p class="eyebrow">Enquiry</p>
     <h2>Tell me what you need.</h2>
-    <p>This is not a contact form. It is a fit check. The more precisely you answer the two big questions, the more useful my reply will be. I read every one myself and answer within two working days.</p>
+    <p>Please answer the two big questions as exactly as you can. The clearer your answer, the more useful my reply. I read every enquiry myself and I answer within two working days.</p>
 
     <form id="enquiry-form" novalidate>
       <input type="hidden" name="access_key" id="access_key">
@@ -570,20 +579,20 @@
         <legend>The two questions that matter</legend>
         <div class="field">
           <label for="goal">What do you want to be able to do in English? <span class="req" aria-hidden="true">*</span>
-            <span class="hint">Be specific. &ldquo;Chair a meeting without rehearsing every sentence&rdquo; tells me far more than &ldquo;improve my English&rdquo;.</span>
+            <span class="hint">Please be exact. &ldquo;Lead a meeting without planning every sentence&rdquo; helps me much more than &ldquo;improve my English&rdquo;.</span>
           </label>
           <textarea id="goal" name="What they want to be able to do" required></textarea>
           <span class="error" id="err-goal">Please write a sentence or two. This is the part I most need.</span>
         </div>
         <div class="field">
           <label for="why">Why now? <span class="req" aria-hidden="true">*</span>
-            <span class="hint">What changed, and is there a date you are working towards? An exam, an interview, a move, a promotion.</span>
+            <span class="hint">What has changed? Do you have a date to work towards? An exam, an interview, a new job, a move to a new country.</span>
           </label>
           <textarea id="why" name="Why now" required></textarea>
           <span class="error" id="err-why">Please tell me what prompted this, even briefly.</span>
         </div>
         <div class="field">
-          <label for="tried">What have you already tried? <span class="hint">Optional, but it saves us both repeating something that did not work.</span></label>
+          <label for="tried">What have you already tried? <span class="hint">Optional. It stops us repeating something that did not work.</span></label>
           <textarea id="tried" name="What they have already tried" style="min-height:4.5rem"></textarea>
         </div>
       </fieldset>
@@ -621,7 +630,7 @@
 
       <div class="form-foot">
         <button class="btn" type="submit" id="submit-btn">Send my enquiry</button>
-        <p class="small">Your answers come straight to my inbox. I do not share them, and I do not add anyone to a mailing list.</p>
+        <p class="small">Your answers come straight to my inbox. I keep them private. I will never add you to a mailing list.</p>
       </div>
 
       <div class="status" id="status" role="status" aria-live="polite"></div>
@@ -636,32 +645,32 @@
 
     <details>
       <summary>What is CELTA, and does it matter?</summary>
-      <p>CELTA is the Cambridge Certificate in Teaching English to Speakers of Other Languages. It is the standard initial qualification for teaching English to adults, and it is assessed on observed teaching practice rather than an essay. It matters because it means someone watched me teach real students and signed it off.</p>
+      <p>CELTA is the Cambridge Certificate in Teaching English to Speakers of Other Languages. It is the main qualification for teaching English to adults. Examiners watched me teach real students and passed me. That is why it matters.</p>
     </details>
 
     <details>
       <summary>Do online lessons work as well as face to face?</summary>
-      <p>For adults, yes, and often better. You get shared documents, corrections you can keep, and no travel. For young children and for very nervous speakers, being in the same room usually wins. Tell me which you are and I will give you a straight answer.</p>
+      <p>For adults, yes. Often better. We share documents, you keep every correction, and nobody travels. Young children and very shy speakers usually do better in the same room. Tell me who you are and I will give you an honest answer.</p>
     </details>
 
     <details>
       <summary>How long will it take?</summary>
-      <p>It depends on the gap between where you are and what you need to do. After the first call I will give you an honest estimate in weeks, not a vague promise. If the deadline is unrealistic I will tell you that too.</p>
+      <p>It depends on the distance between your English now and what you need to do with it. After the first call I will give you an estimate in weeks. If your deadline is too soon, I will tell you that as well.</p>
     </details>
 
     <details>
       <summary>What happens if I need to cancel?</summary>
-      <p>Twenty-four hours' notice and we move the lesson at no cost. Less than that and the lesson is charged, because the preparation is already done. Illness and emergencies are treated sensibly.</p>
+      <p>Tell me a day before and we move the lesson free of charge. With less warning I charge for the lesson, because I have already prepared it. I am sensible about illness and emergencies.</p>
     </details>
 
     <details>
       <summary>Can you teach a small group or a team?</summary>
-      <p>Yes. Groups of up to four work well when everyone is at a similar level and wants the same outcome. Online it is £25 a person, face to face £30. Say so on the form and tell me who is in the group.</p>
+      <p>Yes. Groups of up to four work well when everyone is at a similar level and wants the same thing. Online costs £25 a person. Face to face costs £30. Tell me on the form who is in the group.</p>
     </details>
 
     <details>
       <summary>What if we are not a good fit?</summary>
-      <p>Then I will say so on the first call and suggest someone or something better. A course that does not fit wastes your money and my time.</p>
+      <p>I will tell you on the first call, and I will suggest something better. The wrong course wastes your money and my time.</p>
     </details>
   </div>
 </section>
@@ -670,7 +679,7 @@
   <div class="wrap foot-in">
     <div>
       <span class="foot-brand">William Harvey</span>
-      <p>First Class Honours degree in Zoology. CELTA-qualified English teacher. One-to-one lessons online by Zoom, and in person in [EDIT: TOWN].</p>
+      <p>English. First Class Honours degree in Zoology. CELTA-qualified English teacher. Lessons online by Zoom, and in person in [EDIT: TOWN].</p>
     </div>
     <div>
       <p><a href="mailto:willbharvey@gmail.com">willbharvey@gmail.com</a></p>
