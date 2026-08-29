@@ -24,6 +24,9 @@
   it can only deliver to that inbox, never read anything. To
   rotate it, get a new key at web3forms.com and replace it.
 
+  The address shown to visitors is will@willbharvey.com, which
+  forwards to the Gmail address through ImprovMX.
+
   NEVER open this file in Microsoft Word. Word rewrites it as
   its own markup and the site stops working. Edit it in a plain
   text editor: VS Code, Notepad, TextEdit in plain-text mode.
@@ -161,9 +164,8 @@
     max-width:none; text-align:center;
   }
   @media (max-width:820px){
-    .hero-grid > div:not(.portrait-block){order:2}
-    .portrait-block{order:1; align-items:center; margin-bottom:.5rem}
-    .portrait{max-width:13rem; aspect-ratio:1}
+    .portrait-block{align-items:center; margin-top:1.75rem}
+    .portrait{max-width:14rem}
     .welcome{max-width:22rem}
   }
 
@@ -674,7 +676,7 @@
       <p>English. First Class Honours degree in Zoology. CELTA-qualified English teacher. Lessons online by Zoom, and in person in Peterborough.</p>
     </div>
     <div>
-      <p><a href="mailto:willbharvey@gmail.com">willbharvey@gmail.com</a></p>
+      <p><a href="mailto:will@willbharvey.com">will@willbharvey.com</a></p>
       <p style="margin-top:.4rem"><a href="#enquiry">Start an enquiry</a></p>
     </div>
   </div>
@@ -689,7 +691,7 @@
      To rotate it, get a new key at web3forms.com and replace it. */
   var FORM_ACCESS_KEY = "689758a0-3492-4f19-8027-5e63fffcd000";
 
-  var CONTACT_EMAIL = "willbharvey@gmail.com";
+  var CONTACT_EMAIL = "will@willbharvey.com";
 
   var form = document.getElementById("enquiry-form");
   var statusBox = document.getElementById("status");
