@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>William Harvey — CELTA-qualified English teacher, online and in person</title>
+<meta name="description" content="One-to-one English lessons built around your reason for learning. Exams, business English, everyday conversation, children and teens. Online by Zoom or in person. CELTA qualified.">
+<meta name="theme-color" content="#1B3A32">
+<meta property="og:title" content="William Harvey — English lessons that build real confidence">
+<meta property="og:description" content="CELTA-qualified one-to-one English lessons, online by Zoom or in person.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B3A32'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23F6EFE3' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!--
+  ============================================================
+  STILL TO DO — search for [EDIT]
+  ============================================================
+  1. FORM_ACCESS_KEY in the script at the foot of this file.
+     Free key from web3forms.com. Until it is in, the form
+     validates but sends nothing.
+  2. [EDIT: TOWN] — where Will teaches in person. Two places.
+  3. Photo is in: will.jpg beside this file. Done.
+
+  NEVER open this file in Microsoft Word. Word rewrites it as
+  its own markup and the site stops working. Edit it in a plain
+  text editor: VS Code, Notepad, TextEdit in plain-text mode.
+  ============================================================
+-->
+
+<style>
+  :root{
+    --ink:#12241F;
+    --green:#1B3A32;
+    --green-mid:#2F5A4E;
+    --cream:#FAF6EF;
+    --cream-2:#F2EBDF;
+    --paper:#FFFDF9;
+    --clay:#B85433;
+    --clay-soft:#E9D3C6;
+    --muted:#5B6B64;
+    --line:#DDD4C4;
+    --radius:14px;
+    --measure:34rem;
+    --shadow:0 1px 2px rgba(18,36,31,.05), 0 8px 28px rgba(18,36,31,.06);
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation-duration:.01ms!important; transition-duration:.01ms!important}
+  }
+
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:Fraunces,Georgia,"Times New Roman",serif;
+    font-weight:600;
+    line-height:1.12;
+    letter-spacing:-.015em;
+    margin:0 0 .5em;
+    color:var(--green);
+  }
+  h1{font-size:clamp(2.3rem,6vw,4.1rem); letter-spacing:-.028em}
+  h2{font-size:clamp(1.7rem,3.6vw,2.6rem)}
+  h3{font-size:1.2rem; letter-spacing:-.01em}
+  p{margin:0 0 1.1em; max-width:var(--measure)}
+  a{color:var(--green); text-decoration-thickness:1px; text-underline-offset:3px}
+  a:hover{color:var(--clay)}
+  :focus-visible{outline:3px solid var(--clay); outline-offset:3px; border-radius:4px}
+
+  .wrap{width:min(100% - 2.5rem, 68rem); margin-inline:auto}
+  .narrow{width:min(100% - 2.5rem, 52rem); margin-inline:auto}
+  section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+  .eyebrow{
+    font-size:.75rem; font-weight:600; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--clay); margin:0 0 1rem;
+  }
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,246,239,.88);
+    backdrop-filter:saturate(160%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex; align-items:center; gap:1.5rem; height:64px}
+  .brand{
+    font-family:Fraunces,Georgia,serif; font-weight:600; font-size:1.05rem;
+    color:var(--green); text-decoration:none; margin-right:auto; letter-spacing:-.01em;
+  }
+  .nav-links{display:flex; gap:1.6rem}
+  .nav-links a{
+    font-size:.92rem; color:var(--muted); text-decoration:none; font-weight:500;
+  }
+  .nav-links a:hover{color:var(--green)}
+  @media (max-width:720px){ .nav-links{display:none} }
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:.55rem;
+    background:var(--green); color:var(--cream);
+    font:inherit; font-weight:500; font-size:1rem;
+    padding:.85rem 1.5rem; border:0; border-radius:999px;
+    text-decoration:none; cursor:pointer;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .btn:hover{background:var(--clay); color:#fff; transform:translateY(-1px)}
+  .btn:disabled{opacity:.55; cursor:progress; transform:none}
+  .btn-ghost{
+    background:transparent; color:var(--green);
+    border:1px solid var(--line); padding:.8rem 1.4rem;
+  }
+  .btn-ghost:hover{background:var(--cream-2); color:var(--green); border-color:var(--green)}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:clamp(3.5rem,8vw,6rem) 0 clamp(3rem,6vw,5rem);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{display:grid; grid-template-columns:1.35fr .65fr; gap:clamp(2rem,5vw,4rem); align-items:center}
+  @media (max-width:820px){ .hero-grid{grid-template-columns:1fr} }
+  .hero p.lede{font-size:clamp(1.08rem,2.1vw,1.3rem); color:var(--muted); max-width:33rem}
+  .hero-cta{display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.8rem}
+  .credentials{
+    display:flex; flex-wrap:wrap; gap:.5rem; margin-top:2.2rem; padding:0; list-style:none;
+  }
+  .credentials li{
+    font-size:.83rem; font-weight:500; color:var(--green-mid);
+    background:var(--cream-2); border:1px solid var(--line);
+    padding:.35rem .8rem; border-radius:999px;
+  }
+  /* Portrait: will.jpg sits beside this file, 900x1125. */
+  .portrait{
+    aspect-ratio:4/5; width:100%; border-radius:var(--radius);
+    background:linear-gradient(155deg,var(--green) 0%,var(--green-mid) 100%);
+    display:grid; place-items:center; box-shadow:var(--shadow);
+    object-fit:cover;
+  }
+  .portrait span{
+    font-family:Fraunces,Georgia,serif; font-size:clamp(3rem,9vw,5rem);
+    color:var(--clay-soft); line-height:1;
+  }
+  img.portrait{display:block; height:auto; background:none}
+  @media (max-width:820px){
+    .hero-grid > div{order:2}
+    .portrait{order:1; max-width:13rem; aspect-ratio:1; margin-bottom:.5rem}
+  }
+
+  /* ---------- intro ---------- */
+  .intro{background:var(--paper); border-bottom:1px solid var(--line)}
+  .cases{
+    list-style:none; padding:0; margin:1.8rem 0 2rem;
+    display:grid; gap:.9rem; max-width:38rem;
+  }
+  .cases li{padding-left:1.5rem; position:relative; color:var(--green-mid)}
+  .cases li::before{
+    content:""; position:absolute; left:0; top:.72em;
+    width:.55rem; height:.55rem; border-radius:50%; background:var(--clay-soft);
+  }
+  .stress{
+    font-family:Fraunces,Georgia,serif; font-size:clamp(1.25rem,2.6vw,1.7rem);
+    line-height:1.35; color:var(--green); max-width:30rem; margin:0;
+  }
+
+  /* ---------- cards ---------- */
+  .grid-4{display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:1.25rem; margin-top:2.5rem}
+  .card{
+    background:var(--paper); border:1px solid var(--line);
+    border-radius:var(--radius); padding:1.6rem 1.5rem 1.4rem;
+  }
+  .card h3{margin-bottom:.5rem}
+  .card p{font-size:.95rem; color:var(--muted); margin:0; max-width:none}
+  .card .tag{
+    display:block; font-size:.72rem; font-weight:600; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--clay); margin-bottom:.9rem;
+  }
+
+  /* ---------- steps ---------- */
+  .steps{
+    counter-reset:step; list-style:none; padding:0; margin:2.5rem 0 0;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:2rem;
+  }
+  .steps li{counter-increment:step}
+  .steps li::before{
+    content:counter(step);
+    display:grid; place-items:center; width:2.4rem; height:2.4rem;
+    border-radius:50%; background:var(--green); color:var(--cream);
+    font-family:Fraunces,Georgia,serif; font-size:1.15rem; margin-bottom:1rem;
+  }
+  .steps h3{margin-bottom:.4rem}
+  .steps p{font-size:.95rem; color:var(--muted); margin:0; max-width:none}
+
+  /* ---------- two panels ---------- */
+  .panels{display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2.5rem}
+  @media (max-width:720px){ .panels{grid-template-columns:1fr} }
+  .panel{
+    border-radius:var(--radius); padding:1.9rem 1.7rem;
+    border:1px solid var(--line); background:var(--paper);
+  }
+  .panel.dark{background:var(--green); border-color:var(--green); color:var(--cream-2)}
+  .panel.dark h3{color:var(--paper)}
+  .panel.dark .tag{color:var(--clay-soft)}
+  .panel ul{margin:1rem 0 0; padding-left:1.1rem; font-size:.95rem}
+  .panel li{margin-bottom:.45rem}
+  .panel p{font-size:.95rem; max-width:none; margin-bottom:0}
+  .panel.dark p{color:var(--clay-soft)}
+
+  /* ---------- prices ---------- */
+  .price-block{margin-top:2.5rem}
+  .table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  table.prices{
+    width:100%; border-collapse:collapse; margin-top:1.2rem;
+    background:var(--paper); border:1px solid var(--line);
+    border-radius:var(--radius); overflow:hidden; min-width:34rem;
+  }
+  table.prices th,table.prices td{
+    text-align:left; padding:.85rem 1.1rem; border-bottom:1px solid var(--line);
+    font-size:.95rem;
+  }
+  table.prices thead th{
+    background:var(--cream-2); font-size:.74rem; font-weight:600;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--green-mid);
+  }
+  table.prices tbody tr:last-child td{border-bottom:0}
+  table.prices td.cost{
+    font-family:Fraunces,Georgia,serif; font-size:1.15rem;
+    color:var(--green); white-space:nowrap;
+  }
+  table.prices td.who{font-weight:500}
+  .note{font-size:.85rem; color:var(--muted); margin:.8rem 0 0}
+  .offers{display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem}
+  @media (max-width:600px){ .offers{grid-template-columns:1fr} }
+  .offer{
+    background:var(--paper); border:1px solid var(--line);
+    border-radius:var(--radius); padding:1.4rem;
+  }
+  .offer .price{
+    font-family:Fraunces,Georgia,serif; font-size:1.9rem; color:var(--green);
+    display:block; line-height:1.1; margin:.3rem 0 .4rem;
+  }
+  .offer .price small{font-family:Inter,sans-serif; font-size:.85rem; color:var(--muted); font-weight:400}
+  .offer p{font-size:.9rem; color:var(--muted); margin:0; max-width:none}
+
+  /* ---------- form ---------- */
+  .form-section{background:var(--green); color:var(--cream-2)}
+  .form-section h2{color:var(--paper)}
+  .form-section .eyebrow{color:var(--clay-soft)}
+  .form-section > .narrow > p{color:var(--clay-soft); max-width:36rem}
+  form{
+    background:var(--paper); border-radius:var(--radius);
+    padding:clamp(1.5rem,4vw,2.5rem); margin-top:2.5rem; box-shadow:var(--shadow);
+  }
+  fieldset{border:0; padding:0; margin:0 0 2rem}
+  fieldset:last-of-type{margin-bottom:1.5rem}
+  legend{
+    font-family:Fraunces,Georgia,serif; font-size:1.15rem; color:var(--green);
+    padding:0; margin-bottom:1.1rem; font-weight:600;
+  }
+  .field{margin-bottom:1.35rem}
+  .field:last-child{margin-bottom:0}
+  label{
+    display:block; font-size:.93rem; font-weight:500;
+    color:var(--ink); margin-bottom:.35rem;
+  }
+  .hint{display:block; font-size:.85rem; color:var(--muted); font-weight:400; margin-top:.15rem}
+  .req{color:var(--clay)}
+  input[type=text],input[type=email],select,textarea{
+    width:100%; font:inherit; font-size:1rem; color:var(--ink);
+    background:var(--cream); border:1px solid var(--line);
+    border-radius:9px; padding:.7rem .85rem;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  textarea{min-height:6.5rem; resize:vertical; line-height:1.55}
+  input:focus,select:focus,textarea:focus{background:#fff; border-color:var(--green-mid)}
+  input[aria-invalid=true],textarea[aria-invalid=true],select[aria-invalid=true]{border-color:var(--clay); background:#FDF4F0}
+  select{appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235B6B64' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right .95rem center; padding-right:2.4rem}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:1.35rem}
+  @media (max-width:600px){ .two-col{grid-template-columns:1fr} }
+  .choices{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.2rem}
+  .choices label{
+    display:inline-flex; align-items:center; gap:.5rem; margin:0;
+    background:var(--cream); border:1px solid var(--line);
+    padding:.5rem .9rem; border-radius:999px; cursor:pointer; font-weight:400;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .choices label:hover{border-color:var(--green-mid)}
+  .choices input{accent-color:var(--green); margin:0}
+  .choices input:checked + span{font-weight:600; color:var(--green)}
+  .error{display:none; font-size:.85rem; color:var(--clay); margin-top:.35rem; font-weight:500}
+  .field.invalid .error{display:block}
+  .hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
+  .form-foot{display:flex; flex-wrap:wrap; align-items:center; gap:1rem}
+  .form-foot .small{font-size:.85rem; color:var(--muted); margin:0; max-width:22rem}
+  .status{margin-top:1.2rem; padding:1rem 1.1rem; border-radius:9px; font-size:.95rem; display:none}
+  .status.show{display:block}
+  .status.ok{background:#E8F1EC; border:1px solid #B9D3C6; color:#1B3A32}
+  .status.bad{background:#FBEEE8; border:1px solid #E9C8B8; color:#8C3D1E}
+  .status p{margin:0; max-width:none}
+  .status p + p{margin-top:.5rem}
+
+  /* ---------- faq ---------- */
+  details{border-bottom:1px solid var(--line); padding:1.1rem 0}
+  details summary{
+    cursor:pointer; font-weight:600; color:var(--green);
+    list-style:none; display:flex; justify-content:space-between; gap:1rem; align-items:baseline;
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+"; color:var(--clay); font-size:1.3rem; line-height:1; flex:none}
+  details[open] summary::after{content:"–"}
+  details p{margin:.9rem 0 0; color:var(--muted); font-size:.96rem}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--green); color:var(--clay-soft); padding:3rem 0 2.5rem; font-size:.92rem}
+  footer a{color:var(--cream); text-decoration:none}
+  footer a:hover{color:#fff; text-decoration:underline}
+  .foot-in{display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:space-between; align-items:flex-end}
+  .foot-in p{margin:0; max-width:26rem}
+  .foot-brand{
+    font-family:Fraunces,Georgia,serif; font-size:1.2rem; color:var(--paper);
+    display:block; margin-bottom:.4rem;
+  }
+  .skip{
+    position:absolute; left:-9999px; background:var(--green); color:var(--cream);
+    padding:.7rem 1.2rem; border-radius:0 0 8px 0; z-index:100;
+  }
+  .skip:focus{left:0; top:0}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#enquiry">Skip to the enquiry form</a>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">William Harvey</a>
+    <div class="nav-links">
+      <a href="#who">Who I teach</a>
+      <a href="#how">How it works</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#faq">Questions</a>
+    </div>
+    <a class="btn" href="#enquiry">Start an enquiry</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">CELTA-qualified English teacher</p>
+      <h1>English lessons to build real confidence.</h1>
+      <p class="lede">Learn to speak English clearly and confidently for work, travel or socialising. Build your vocabulary, sharpen your grammar, and sound the way you want to sound. One to one, online by Zoom or in person. Every course is built for the individual.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#enquiry">Tell me what you need</a>
+        <a class="btn btn-ghost" href="#how">How it works</a>
+      </div>
+      <ul class="credentials">
+        <li>CELTA qualified, the gold standard for teaching</li>
+        <li>Adults and young learners welcome</li>
+        <li>Online, in person and group lessons</li>
+        <li>Free 20-minute first call</li>
+      </ul>
+    </div>
+    <img src="will.jpg" alt="William Harvey holding his First Class Zoology degree certificate" class="portrait" width="900" height="1125">
+  </div>
+</header>
+
+<section class="intro">
+  <div class="narrow">
+    <p class="eyebrow">Why it works this way</p>
+    <h2>Nobody learns English in general.</h2>
+    <p>Think about the people who ask me for lessons in a typical month.</p>
+    <ul class="cases">
+      <li>An engineer who reads technical specifications without trouble, then goes silent the moment the meeting starts.</li>
+      <li>A student who needs IELTS 7.0 by March and keeps losing marks in the same part of the writing paper.</li>
+      <li>A thirteen-year-old who has stopped putting her hand up in class.</li>
+      <li>Someone who has lived in the UK for six years and still rehearses before phoning the dentist.</li>
+    </ul>
+    <p>Four different problems. A course book treats them as one problem and starts everybody on page one.</p>
+    <p class="stress">I start with you and what you want, then build the lessons around it. That is why the enquiry form asks proper questions.</p>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <p class="eyebrow">Who I teach</p>
+    <h2>Four kinds of learner, four different plans.</h2>
+    <p>If you are not sure which one you are, say so on the form. Most people sit across two.</p>
+    <div class="grid-4">
+      <div class="card">
+        <span class="tag">Exams</span>
+        <h3>Exam preparation</h3>
+        <p>IELTS, Cambridge B2 First and C1 Advanced, TOEFL. We work backwards from your test date, using past papers and timed practice, and we go straight at the parts where you keep dropping marks.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Work</span>
+        <h3>Business English</h3>
+        <p>Meetings, presentations, interviews and email that gets a reply. We use your real documents and your real situations rather than invented ones, so the practice transfers on Monday morning.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Fluency</span>
+        <h3>Everyday conversation</h3>
+        <p>Speaking, listening and confidence. Phone calls, appointments, small talk, disagreeing politely. The aim is that you stop writing the sentence in your head before you say it.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Young learners</span>
+        <h3>Children and teenagers</h3>
+        <p>School support, GCSE years, and children settling into English-medium education. Structured, patient, and honest with parents about what is improving and what is not.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--paper); border-block:1px solid var(--line)">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Three steps, and no obligation until step three.</h2>
+    <ol class="steps">
+      <li>
+        <h3>Tell me what you need</h3>
+        <p>Fill in the form below. It asks what you want to be able to do, and why now. It takes about five minutes, and it is the most useful five minutes of the whole process.</p>
+      </li>
+      <li>
+        <h3>A free 20-minute call</h3>
+        <p>We talk it through on Zoom. I tell you what I think will work, roughly how long it will take, and whether I am the right teacher for it. If I am not, I will say so and point you somewhere better.</p>
+      </li>
+      <li>
+        <h3>Start lessons</h3>
+        <p>Weekly or twice weekly, whichever suits. Materials, homework and a short written summary after every lesson so you can see the ground you have covered.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="lessons">
+  <div class="wrap">
+    <p class="eyebrow">Lessons</p>
+    <h2>Online or in person. Same preparation either way.</h2>
+    <div class="panels">
+      <div class="panel dark">
+        <span class="tag">Online</span>
+        <h3>By Zoom, anywhere</h3>
+        <p>Most of my teaching is online, and it works. Shared documents, live corrections you can keep, and recordings if you want to go back over a lesson.</p>
+        <ul>
+          <li>40 or 60-minute lessons</li>
+          <li>Individual or group tuition</li>
+          <li>Flexible times to suit you, across time zones</li>
+          <li>Written notes after every session</li>
+          <li>All materials shared digitally</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="tag">In person</span>
+        <h3>Face to face in [EDIT: TOWN]</h3>
+        <p>In person suits young learners, nervous speakers and group lessons. I travel within a reasonable distance, or we can use a quiet public space like a coffee shop or a library.</p>
+        <ul>
+          <li>At your home, office or a library</li>
+          <li>Within [EDIT: TOWN] and the surrounding area</li>
+          <li>Good for children and teenagers</li>
+          <li>Small groups by arrangement</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-block">
+      <h3>Single lessons</h3>
+      <p>One to one or in a small group, online or in person. Paid in advance.</p>
+      <div class="table-scroll">
+        <table class="prices">
+          <thead>
+            <tr>
+              <th scope="col">Who</th>
+              <th scope="col">Lesson type</th>
+              <th scope="col">Length</th>
+              <th scope="col">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="who">1 person</td><td>Online</td><td>60 minutes</td><td class="cost">£40</td></tr>
+            <tr><td class="who">1 person</td><td>Face to face</td><td>60 minutes</td><td class="cost">£50</td></tr>
+            <tr><td class="who">Group, 4 max</td><td>Online</td><td>60 minutes</td><td class="cost">£25 each</td></tr>
+            <tr><td class="who">Group, 4 max</td><td>Face to face</td><td>60 minutes</td><td class="cost">£30 each</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">All lessons are paid in advance.</p>
+
+      <div class="offers">
+        <div class="offer">
+          <h3>Block of ten lessons</h3>
+          <span class="price">£400 <small>/ ten lessons</small></span>
+          <p>Booked in advance. Cheaper per lesson, and ten lessons in a row is what delivers the results.</p>
+        </div>
+        <div class="offer">
+          <h3>First call</h3>
+          <span class="price">Free <small>/ 20 minutes</small></span>
+          <p>No lesson, no sales pitch. We work out whether this is a good fit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="enquiry">
+  <div class="narrow">
+    <p class="eyebrow">Enquiry</p>
+    <h2>Tell me what you need.</h2>
+    <p>This is not a contact form. It is a fit check. The more precisely you answer the two big questions, the more useful my reply will be. I read every one myself and answer within two working days.</p>
+
+    <form id="enquiry-form" novalidate>
+      <input type="hidden" name="access_key" id="access_key">
+      <input type="hidden" name="subject" value="New lesson enquiry from the website">
+      <input type="hidden" name="from_name" value="William Harvey website">
+      <div class="hp" aria-hidden="true">
+        <label for="botcheck">Leave this field empty</label>
+        <input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off">
+      </div>
+
+      <fieldset>
+        <legend>About you</legend>
+        <div class="two-col">
+          <div class="field">
+            <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <span class="error" id="err-name">Please tell me your name.</span>
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="error" id="err-email">Please give an email address I can reply to.</span>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label for="learner">Who are the lessons for?</label>
+            <select id="learner" name="Lessons are for">
+              <option value="Myself">Myself</option>
+              <option value="My child">My child</option>
+              <option value="Someone else in my family">Someone else in my family</option>
+              <option value="My team at work">My team at work</option>
+              <option value="A group of us">A group of us</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="level">Current level <span class="hint">A rough guess is fine</span></label>
+            <select id="level" name="Current level">
+              <option value="Not sure">Not sure</option>
+              <option value="Beginner (A1)">Beginner (A1)</option>
+              <option value="Elementary (A2)">Elementary (A2)</option>
+              <option value="Intermediate (B1)">Intermediate (B1)</option>
+              <option value="Upper intermediate (B2)">Upper intermediate (B2)</option>
+              <option value="Advanced (C1 or above)">Advanced (C1 or above)</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>The two questions that matter</legend>
+        <div class="field">
+          <label for="goal">What do you want to be able to do in English? <span class="req" aria-hidden="true">*</span>
+            <span class="hint">Be specific. &ldquo;Chair a meeting without rehearsing every sentence&rdquo; tells me far more than &ldquo;improve my English&rdquo;.</span>
+          </label>
+          <textarea id="goal" name="What they want to be able to do" required></textarea>
+          <span class="error" id="err-goal">Please write a sentence or two. This is the part I most need.</span>
+        </div>
+        <div class="field">
+          <label for="why">Why now? <span class="req" aria-hidden="true">*</span>
+            <span class="hint">What changed, and is there a date you are working towards? An exam, an interview, a move, a promotion.</span>
+          </label>
+          <textarea id="why" name="Why now" required></textarea>
+          <span class="error" id="err-why">Please tell me what prompted this, even briefly.</span>
+        </div>
+        <div class="field">
+          <label for="tried">What have you already tried? <span class="hint">Optional, but it saves us both repeating something that did not work.</span></label>
+          <textarea id="tried" name="What they have already tried" style="min-height:4.5rem"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Practicalities</legend>
+        <div class="field">
+          <label id="mode-label">How would you like to learn?</label>
+          <div class="choices" role="radiogroup" aria-labelledby="mode-label">
+            <label><input type="radio" name="Preferred format" value="Online by Zoom" checked><span>Online by Zoom</span></label>
+            <label><input type="radio" name="Preferred format" value="In person"><span>In person</span></label>
+            <label><input type="radio" name="Preferred format" value="Either"><span>Either is fine</span></label>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label for="frequency">How often?</label>
+            <select id="frequency" name="Frequency">
+              <option value="Once a week">Once a week</option>
+              <option value="Twice a week">Twice a week</option>
+              <option value="Intensive before a deadline">Intensive before a deadline</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="times">Days or times that suit you</label>
+            <input type="text" id="times" name="Preferred times" placeholder="Weekday evenings, Saturday mornings...">
+          </div>
+        </div>
+        <div class="field">
+          <label for="extra">Anything else I should know?</label>
+          <textarea id="extra" name="Anything else" style="min-height:4.5rem"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="form-foot">
+        <button class="btn" type="submit" id="submit-btn">Send my enquiry</button>
+        <p class="small">Your answers come straight to my inbox. I do not share them, and I do not add anyone to a mailing list.</p>
+      </div>
+
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="narrow">
+    <p class="eyebrow">Questions</p>
+    <h2>The things people ask first.</h2>
+
+    <details>
+      <summary>What is CELTA, and does it matter?</summary>
+      <p>CELTA is the Cambridge Certificate in Teaching English to Speakers of Other Languages. It is the standard initial qualification for teaching English to adults, and it is assessed on observed teaching practice rather than an essay. It matters because it means someone watched me teach real students and signed it off.</p>
+    </details>
+
+    <details>
+      <summary>Do online lessons work as well as face to face?</summary>
+      <p>For adults, yes, and often better. You get shared documents, corrections you can keep, and no travel. For young children and for very nervous speakers, being in the same room usually wins. Tell me which you are and I will give you a straight answer.</p>
+    </details>
+
+    <details>
+      <summary>How long will it take?</summary>
+      <p>It depends on the gap between where you are and what you need to do. After the first call I will give you an honest estimate in weeks, not a vague promise. If the deadline is unrealistic I will tell you that too.</p>
+    </details>
+
+    <details>
+      <summary>What happens if I need to cancel?</summary>
+      <p>Twenty-four hours' notice and we move the lesson at no cost. Less than that and the lesson is charged, because the preparation is already done. Illness and emergencies are treated sensibly.</p>
+    </details>
+
+    <details>
+      <summary>Can you teach a small group or a team?</summary>
+      <p>Yes. Groups of up to four work well when everyone is at a similar level and wants the same outcome. Online it is £25 a person, face to face £30. Say so on the form and tell me who is in the group.</p>
+    </details>
+
+    <details>
+      <summary>What if we are not a good fit?</summary>
+      <p>Then I will say so on the first call and suggest someone or something better. A course that does not fit wastes your money and my time.</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>
+      <span class="foot-brand">William Harvey</span>
+      <p>First Class Honours degree in Zoology. CELTA-qualified English teacher. One-to-one lessons online by Zoom, and in person in [EDIT: TOWN].</p>
+    </div>
+    <div>
+      <p><a href="mailto:willbharvey@gmail.com">willbharvey@gmail.com</a></p>
+      <p style="margin-top:.4rem"><a href="#enquiry">Start an enquiry</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* [EDIT] Paste the free Web3Forms access key here.
+     Get one in 30 seconds at https://web3forms.com using
+     willbharvey@gmail.com. No account needed. Until it is in,
+     the form shows a notice instead of failing silently. */
+  var FORM_ACCESS_KEY = "REPLACE_WITH_YOUR_WEB3FORMS_KEY";
+
+  var CONTACT_EMAIL = "willbharvey@gmail.com";
+
+  var form = document.getElementById("enquiry-form");
+  var statusBox = document.getElementById("status");
+  var button = document.getElementById("submit-btn");
+  document.getElementById("access_key").value = FORM_ACCESS_KEY;
+
+  var required = ["name", "email", "goal", "why"];
+
+  function fieldOf(el) { return el.closest(".field"); }
+
+  function validate(el) {
+    var value = el.value.trim();
+    var ok = value.length > 0;
+    if (ok && el.type === "email") {
+      ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+    if (ok && el.tagName === "TEXTAREA") {
+      ok = value.length >= 10;
+    }
+    fieldOf(el).classList.toggle("invalid", !ok);
+    el.setAttribute("aria-invalid", ok ? "false" : "true");
+    return ok;
+  }
+
+  required.forEach(function (id) {
+    var el = document.getElementById(id);
+    el.addEventListener("blur", function () { validate(el); });
+    el.addEventListener("input", function () {
+      if (fieldOf(el).classList.contains("invalid")) validate(el);
+    });
+  });
+
+  function show(kind, html) {
+    statusBox.className = "status show " + kind;
+    statusBox.innerHTML = html;
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    statusBox.className = "status";
+
+    var firstBad = null;
+    required.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!validate(el) && !firstBad) firstBad = el;
+    });
+
+    if (firstBad) {
+      show("bad", "<p>Almost there. Please check the highlighted answers.</p>");
+      firstBad.focus();
+      firstBad.scrollIntoView({ block: "center", behavior: "smooth" });
+      return;
+    }
+
+    if (FORM_ACCESS_KEY.indexOf("REPLACE_") === 0) {
+      show("bad",
+        "<p><strong>The form is not connected yet.</strong> Everything else works, but nothing has been sent.</p>" +
+        "<p>Get a free key at web3forms.com and paste it into FORM_ACCESS_KEY in this page's script.</p>");
+      return;
+    }
+
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    var payload = {};
+    new FormData(form).forEach(function (value, key) { payload[key] = value; });
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (response) { return response.json().then(function (data) { return { ok: response.ok, data: data }; }); })
+      .then(function (result) {
+        if (result.ok && result.data.success) {
+          form.querySelectorAll("fieldset, .form-foot").forEach(function (node) { node.style.display = "none"; });
+          show("ok",
+            "<p><strong>Thank you. That has reached me.</strong></p>" +
+            "<p>I read every enquiry myself and I will reply within two working days, usually with a suggested time for the free 20-minute call.</p>");
+          statusBox.scrollIntoView({ block: "center", behavior: "smooth" });
+        } else {
+          throw new Error(result.data.message || "Send failed");
+        }
+      })
+      .catch(function () {
+        show("bad",
+          "<p><strong>That did not send.</strong> Something went wrong at our end, not yours.</p>" +
+          "<p>Please email me directly at <a href=\"mailto:" + CONTACT_EMAIL + "\">" + CONTACT_EMAIL + "</a> and paste your answers in.</p>");
+      })
+      .then(function () {
+        button.disabled = false;
+        button.textContent = "Send my enquiry";
+      });
+  });
+})();
+</script>
+</body>
+</html>
